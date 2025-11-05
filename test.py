@@ -1,3 +1,20 @@
+def is_prime(n: int) -> bool:
+    """Return True if n is a prime number, False otherwise."""
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
 def greet(name):
     """Return a simple greeting."""
     return f"Hello, {name}!"
@@ -5,3 +22,5 @@ def greet(name):
 
 if __name__ == "__main__":
     print(greet("World"))
+    print(is_prime(11))
+    print(is_prime(4))
