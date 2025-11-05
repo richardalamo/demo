@@ -15,12 +15,13 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def greet(name):
+def greet(name,last_name):
     """Return a simple greeting."""
-    return f"Hello, {name}!"
+    return f"Hello, {name},{last_name}!"
     
 
 if __name__ == "__main__":
     print(greet("World"))
+
     print(is_prime(11))
     print(is_prime(4))
