@@ -1,1 +1,7 @@
-print('this is a test file')
+def greet(name):
+    """Return a simple greeting."""
+    return f"Hello, {name}!"
+    
+
+if __name__ == "__main__":
+    print(greet("World"))
